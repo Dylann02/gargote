@@ -1,0 +1,991 @@
+                        "too_many_requests": 429,
+                        "server_error": 500,
+                        "unsupported_grant_type": 501,
+                        "not_implemented": 501
+                    },
+                    "formatter": null,
+                    "plats": {
+                        "pager": null,
+                        "db": {
+                            "DSN": "host=localhost port=5432 user=gargote password='gargote' dbname=gargote",
+                            "port": 5432,
+                            "hostname": "localhost",
+                            "username": "gargote",
+                            "password": "gargote",
+                            "database": "gargote",
+                            "DBDriver": "Postgre",
+                            "subdriver": null,
+                            "DBPrefix": "",
+                            "pConnect": false,
+                            "DBDebug": true,
+                            "charset": "utf8",
+                            "DBCollat": "",
+                            "swapPre": "",
+                            "encrypt": false,
+                            "compress": false,
+                            "strictOn": false,
+                            "failover": [],
+                            "lastQuery": {
+                                "originalQueryString": "INSERT INTO \"plat\" (\"nom\", \"prix\", \"id_categorie\") VALUES (:nom:, :prix:, :id_categorie:)",
+                                "finalQueryString": "INSERT INTO \"plat\" (\"nom\", \"prix\", \"id_categorie\") VALUES ('Mofo gasy', 300, 1)",
+                                "binds": {
+                                    "nom": [
+                                        "Mofo gasy",
+                                        true
+                                    ],
+                                    "prix": [
+                                        300,
+                                        true
+                                    ],
+                                    "id_categorie": [
+                                        1,
+                                        true
+                                    ]
+                                },
+                                "bindMarker": "?",
+                                "startTime": 1792601864.02291,
+                                "endTime": 1792601864.02291,
+                                "errorCode": null,
+                                "errorString": "",
+                                "db": "[CodeIgniter\\Database\\Postgre\\Connection Object *RECURSION*]"
+                            },
+                            "connID": "[PgSql\\Connection Object *RECURSION*]",
+                            "resultID": false,
+                            "protectIdentifiers": true,
+                            "reservedIdentifiers": [
+                                "*"
+                            ],
+                            "escapeChar": "\"",
+                            "likeEscapeStr": " ESCAPE '%s' ",
+                            "likeEscapeChar": "!",
+                            "pregEscapeChar": {
+                                "1": "\"",
+                                "0": "\"",
+                                "3": "\"",
+                                "2": "\""
+                            },
+                            "dataCache": [],
+                            "connectTime": 1792601864.01698,
+                            "connectDuration": 0.005908012390136719,
+                            "pretend": false,
+                            "transEnabled": true,
+                            "transStrict": true,
+                            "transDepth": 0,
+                            "transStatus": true,
+                            "transFailure": false,
+                            "transException": false,
+                            "aliasedTables": [],
+                            "queryClass": "CodeIgniter\\Database\\Query",
+                            "dateFormat": {
+                                "date": "Y-m-d",
+                                "datetime": "Y-m-d H:i:s",
+                                "datetime-ms": "Y-m-d H:i:s.v",
+                                "datetime-us": "Y-m-d H:i:s.u",
+                                "time": "H:i:s"
+                            },
+                            "schema": "public",
+                            "connect_timeout": null,
+                            "options": null,
+                            "sslmode": null,
+                            "service": null
+                        },
+                        "insertID": 0,
+                        "DBGroup": null,
+                        "returnType": "array",
+                        "tempReturnType": "array",
+                        "casts": {
+                            "id": "int",
+                            "prix": "int",
+                            "id_categorie": "int"
+                        },
+                        "castHandlers": [],
+                        "converter": {
+                            "dataCaster": {
+                                "types": {
+                                    "id": "int",
+                                    "prix": "int",
+                                    "id_categorie": "int"
+                                },
+                                "castHandlers": {
+                                    "array": "CodeIgniter\\DataCaster\\Cast\\ArrayCast",
+                                    "bool": "CodeIgniter\\DataCaster\\Cast\\BooleanCast",
+                                    "boolean": "CodeIgniter\\DataCaster\\Cast\\BooleanCast",
+                                    "csv": "CodeIgniter\\DataCaster\\Cast\\CSVCast",
+                                    "datetime": "CodeIgniter\\DataCaster\\Cast\\DatetimeCast",
+                                    "enum": "CodeIgniter\\DataCaster\\Cast\\EnumCast",
+                                    "double": "CodeIgniter\\DataCaster\\Cast\\FloatCast",
+                                    "float": "CodeIgniter\\DataCaster\\Cast\\FloatCast",
+                                    "int": "CodeIgniter\\DataCaster\\Cast\\IntegerCast",
+                                    "integer": "CodeIgniter\\DataCaster\\Cast\\IntegerCast",
+                                    "int-bool": "CodeIgniter\\DataCaster\\Cast\\IntBoolCast",
+                                    "json": "CodeIgniter\\DataCaster\\Cast\\JsonCast",
+                                    "timestamp": "CodeIgniter\\DataCaster\\Cast\\TimestampCast",
+                                    "uri": "CodeIgniter\\DataCaster\\Cast\\URICast"
+                                },
+                                "helper": "[CodeIgniter\\Database\\Postgre\\Connection Object *RECURSION*]",
+                                "strict": true
+                            },
+                            "types": {
+                                "id": "int",
+                                "prix": "int",
+                                "id_categorie": "int"
+                            },
+                            "helper": "[CodeIgniter\\Database\\Postgre\\Connection Object *RECURSION*]",
+                            "reconstructor": "reconstruct",
+                            "extractor": null
+                        },
+                        "protectFields": true,
+                        "allowedFields": [
+                            "nom",
+                            "prix",
+                            "id_categorie"
+                        ],
+                        "useTimestamps": false,
+                        "dateFormat": "datetime",
+                        "createdField": "created_at",
+                        "updatedField": "updated_at",
+                        "useSoftDeletes": false,
+                        "tempUseSoftDeletes": false,
+                        "deletedField": "deleted_at",
+                        "allowEmptyInserts": false,
+                        "updateOnlyChanged": true,
+                        "validationRules": {
+                            "nom": "required|max_length[100]",
+                            "prix": "required|integer",
+                            "id_categorie": "required|integer"
+                        },
+                        "validationMessages": {
+                            "nom": {
+                                "required": "Le nom du plat est obligatoire.",
+                                "max_length": "Le nom ne doit pas dépasser 100 caractères."
+                            },
+                            "prix": {
+                                "required": "Le prix est obligatoire.",
+                                "integer": "Le prix doit être un nombre entier (en Ariary)."
+                            },
+                            "id_categorie": {
+                                "required": "Choisissez une catégorie."
+                            }
+                        },
+                        "skipValidation": false,
+                        "cleanValidationRules": true,
+                        "validation": {
+                            "ruleSetFiles": [
+                                "CodeIgniter\\Validation\\StrictRules\\Rules",
+                                "CodeIgniter\\Validation\\StrictRules\\FormatRules",
+                                "CodeIgniter\\Validation\\StrictRules\\FileRules",
+                                "CodeIgniter\\Validation\\StrictRules\\CreditCardRules",
+                                "App\\Validation\\GargoteRules"
+                            ],
+                            "ruleSetInstances": [
+                                {
+                                    "nonStrictRules": []
+                                },
+                                {
+                                    "nonStrictFormatRules": []
+                                },
+                                {
+                                    "request": "[CodeIgniter\\HTTP\\IncomingRequest Object *RECURSION*]"
+                                },
+                                {
+                                    "nonStrictCreditCardRules": {
+                                        "cards": {
+                                            "American Express": {
+                                                "name": "amex",
+                                                "length": "15",
+                                                "prefixes": "34,37",
+                                                "checkdigit": true
+                                            },
+                                            "China UnionPay": {
+                                                "name": "unionpay",
+                                                "length": "16,17,18,19",
+                                                "prefixes": "62",
+                                                "checkdigit": true
+                                            },
+                                            "Dankort": {
+                                                "name": "dankort",
+                                                "length": "16",
+                                                "prefixes": "5019,4175,4571,4",
+                                                "checkdigit": true
+                                            },
+                                            "DinersClub": {
+                                                "name": "dinersclub",
+                                                "length": "14,16",
+                                                "prefixes": "300,301,302,303,304,305,309,36,38,39,54,55",
+                                                "checkdigit": true
+                                            },
+                                            "DinersClub CarteBlanche": {
+                                                "name": "carteblanche",
+                                                "length": "14",
+                                                "prefixes": "300,301,302,303,304,305",
+                                                "checkdigit": true
+                                            },
+                                            "Discover Card": {
+                                                "name": "discover",
+                                                "length": "16,19",
+                                                "prefixes": "6011,622,644,645,656,647,648,649,65",
+                                                "checkdigit": true
+                                            },
+                                            "InterPayment": {
+                                                "name": "interpayment",
+                                                "length": "16,17,18,19",
+                                                "prefixes": "4",
+                                                "checkdigit": true
+                                            },
+                                            "JCB": {
+                                                "name": "jcb",
+                                                "length": "16,17,18,19",
+                                                "prefixes": "352,353,354,355,356,357,358",
+                                                "checkdigit": true
+                                            },
+                                            "Maestro": {
+                                                "name": "maestro",
+                                                "length": "12,13,14,15,16,18,19",
+                                                "prefixes": "50,56,57,58,59,60,61,62,63,64,65,66,67,68,69",
+                                                "checkdigit": true
+                                            },
+                                            "MasterCard": {
+                                                "name": "mastercard",
+                                                "length": "16",
+                                                "prefixes": "51,52,53,54,55,22,23,24,25,26,27",
+                                                "checkdigit": true
+                                            },
+                                            "NSPK MIR": {
+                                                "name": "mir",
+                                                "length": "16",
+                                                "prefixes": "2200,2201,2202,2203,2204",
+                                                "checkdigit": true
+                                            },
+                                            "Troy": {
+                                                "name": "troy",
+                                                "length": "16",
+                                                "prefixes": "979200,979289",
+                                                "checkdigit": true
+                                            },
+                                            "UATP": {
+                                                "name": "uatp",
+                                                "length": "15",
+                                                "prefixes": "1",
+                                                "checkdigit": true
+                                            },
+                                            "Verve": {
+                                                "name": "verve",
+                                                "length": "16,19",
+                                                "prefixes": "506,650",
+                                                "checkdigit": true
+                                            },
+                                            "Visa": {
+                                                "name": "visa",
+                                                "length": "13,16,19",
+                                                "prefixes": "4",
+                                                "checkdigit": true
+                                            },
+                                            "BMO ABM Card": {
+                                                "name": "bmoabm",
+                                                "length": "16",
+                                                "prefixes": "500",
+                                                "checkdigit": false
+                                            },
+                                            "CIBC Convenience Card": {
+                                                "name": "cibc",
+                                                "length": "16",
+                                                "prefixes": "4506",
+                                                "checkdigit": false
+                                            },
+                                            "HSBC Canada Card": {
+                                                "name": "hsbc",
+                                                "length": "16",
+                                                "prefixes": "56",
+                                                "checkdigit": false
+                                            },
+                                            "Royal Bank of Canada Client Card": {
+                                                "name": "rbc",
+                                                "length": "16",
+                                                "prefixes": "45",
+                                                "checkdigit": false
+                                            },
+                                            "Scotiabank Scotia Card": {
+                                                "name": "scotia",
+                                                "length": "16",
+                                                "prefixes": "4536",
+                                                "checkdigit": false
+                                            },
+                                            "TD Canada Trust Access Card": {
+                                                "name": "tdtrust",
+                                                "length": "16",
+                                                "prefixes": "589297",
+                                                "checkdigit": false
+                                            }
+                                        }
+                                    }
+                                },
+                                []
+                            ],
+                            "rules": {
+                                "nom": {
+                                    "rules": [
+                                        "required",
+                                        "max_length[100]"
+                                    ]
+                                },
+                                "prix": {
+                                    "rules": [
+                                        "required",
+                                        "integer"
+                                    ]
+                                },
+                                "id_categorie": {
+                                    "rules": [
+                                        "required",
+                                        "integer"
+                                    ]
+                                }
+                            },
+                            "data": {
+                                "nom": "Mofo gasy",
+                                "prix": 300,
+                                "id_categorie": 1
+                            },
+                            "validated": {
+                                "nom": "Mofo gasy",
+                                "prix": 300,
+                                "id_categorie": 1
+                            },
+                            "errors": [],
+                            "customErrors": {
+                                "nom": {
+                                    "required": "Le nom du plat est obligatoire.",
+                                    "max_length": "Le nom ne doit pas dépasser 100 caractères."
+                                },
+                                "prix": {
+                                    "required": "Le prix est obligatoire.",
+                                    "integer": "Le prix doit être un nombre entier (en Ariary)."
+                                },
+                                "id_categorie": {
+                                    "required": "Choisissez une catégorie."
+                                }
+                            },
+                            "config": {
+                                "ruleSets": [
+                                    "CodeIgniter\\Validation\\StrictRules\\Rules",
+                                    "CodeIgniter\\Validation\\StrictRules\\FormatRules",
+                                    "CodeIgniter\\Validation\\StrictRules\\FileRules",
+                                    "CodeIgniter\\Validation\\StrictRules\\CreditCardRules",
+                                    "App\\Validation\\GargoteRules"
+                                ],
+                                "templates": {
+                                    "list": "CodeIgniter\\Validation\\Views\\list",
+                                    "single": "CodeIgniter\\Validation\\Views\\single"
+                                }
+                            },
+                            "view": {
+                                "data": [],
+                                "tempData": null,
+                                "viewPath": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/../Views/",
+                                "renderVars": [],
+                                "loader": {
+                                    "autoloader": {
+                                        "prefixes": {
+                                            "CodeIgniter": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/"
+                                            ],
+                                            "Config": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/"
+                                            ],
+                                            "App": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/"
+                                            ],
+                                            "Translations": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../codeigniter4/translations/"
+                                            ],
+                                            "Tests\\Support": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../../tests/_support/"
+                                            ],
+                                            "Psr\\Log": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../psr/log/src/"
+                                            ],
+                                            "Psr\\Container": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../psr/container/src/"
+                                            ],
+                                            "PhpParser": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../nikic/php-parser/lib/PhpParser/"
+                                            ],
+                                            "Laminas\\Escaper": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../laminas/laminas-escaper/src/"
+                                            ],
+                                            "Faker": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../fakerphp/faker/src/Faker/"
+                                            ],
+                                            "DeepCopy": [
+                                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/composer/../myclabs/deep-copy/src/DeepCopy/"
+                                            ]
+                                        },
+                                        "classmap": {
+                                            "Psr\\Log\\AbstractLogger": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/AbstractLogger.php",
+                                            "Psr\\Log\\InvalidArgumentException": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/InvalidArgumentException.php",
+                                            "Psr\\Log\\LoggerAwareInterface": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/LoggerAwareInterface.php",
+                                            "Psr\\Log\\LoggerAwareTrait": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/LoggerAwareTrait.php",
+                                            "Psr\\Log\\LoggerInterface": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/LoggerInterface.php",
+                                            "Psr\\Log\\LoggerTrait": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/LoggerTrait.php",
+                                            "Psr\\Log\\LogLevel": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/LogLevel.php",
+                                            "Psr\\Log\\NullLogger": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/PSR/Log/NullLogger.php",
+                                            "Laminas\\Escaper\\Exception\\ExceptionInterface": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/Escaper/Exception/ExceptionInterface.php",
+                                            "Laminas\\Escaper\\Exception\\InvalidArgumentException": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/Escaper/Exception/InvalidArgumentException.php",
+                                            "Laminas\\Escaper\\Exception\\RuntimeException": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/Escaper/Exception/RuntimeException.php",
+                                            "Laminas\\Escaper\\EscaperInterface": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/Escaper/EscaperInterface.php",
+                                            "Laminas\\Escaper\\Escaper": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/ThirdParty/Escaper/Escaper.php"
+                                        },
+                                        "files": [],
+                                        "helpers": [
+                                            "url"
+                                        ],
+                                        "registeredClosures": [
+                                            "[Closure]",
+                                            "[Closure]"
+                                        ],
+                                        "composerPath": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/autoload.php"
+                                    },
+                                    "invalidClassnames": []
+                                },
+                                "logger": "[CodeIgniter\\Log\\Logger Object *RECURSION*]",
+                                "debug": true,
+                                "performanceData": [],
+                                "config": {
+                                    "saveData": true,
+                                    "filters": {
+                                        "abs": "\\abs",
+                                        "capitalize": "\\CodeIgniter\\View\\Filters::capitalize",
+                                        "date": "\\CodeIgniter\\View\\Filters::date",
+                                        "date_modify": "\\CodeIgniter\\View\\Filters::date_modify",
+                                        "default": "\\CodeIgniter\\View\\Filters::default",
+                                        "esc": "\\CodeIgniter\\View\\Filters::esc",
+                                        "excerpt": "\\CodeIgniter\\View\\Filters::excerpt",
+                                        "highlight": "\\CodeIgniter\\View\\Filters::highlight",
+                                        "highlight_code": "\\CodeIgniter\\View\\Filters::highlight_code",
+                                        "limit_words": "\\CodeIgniter\\View\\Filters::limit_words",
+                                        "limit_chars": "\\CodeIgniter\\View\\Filters::limit_chars",
+                                        "local_currency": "\\CodeIgniter\\View\\Filters::local_currency",
+                                        "local_number": "\\CodeIgniter\\View\\Filters::local_number",
+                                        "lower": "\\strtolower",
+                                        "nl2br": "\\CodeIgniter\\View\\Filters::nl2br",
+                                        "number_format": "\\number_format",
+                                        "prose": "\\CodeIgniter\\View\\Filters::prose",
+                                        "round": "\\CodeIgniter\\View\\Filters::round",
+                                        "strip_tags": "\\strip_tags",
+                                        "title": "\\CodeIgniter\\View\\Filters::title",
+                                        "upper": "\\strtoupper"
+                                    },
+                                    "plugins": {
+                                        "csp_script_nonce": "\\CodeIgniter\\View\\Plugins::cspScriptNonce",
+                                        "csp_style_nonce": "\\CodeIgniter\\View\\Plugins::cspStyleNonce",
+                                        "current_url": "\\CodeIgniter\\View\\Plugins::currentURL",
+                                        "previous_url": "\\CodeIgniter\\View\\Plugins::previousURL",
+                                        "mailto": "\\CodeIgniter\\View\\Plugins::mailto",
+                                        "safe_mailto": "\\CodeIgniter\\View\\Plugins::safeMailto",
+                                        "lang": "\\CodeIgniter\\View\\Plugins::lang",
+                                        "validation_errors": "\\CodeIgniter\\View\\Plugins::validationErrors",
+                                        "route": "\\CodeIgniter\\View\\Plugins::route",
+                                        "siteURL": "\\CodeIgniter\\View\\Plugins::siteURL"
+                                    },
+                                    "restrictParserConditionals": false,
+                                    "coreFilters": {
+                                        "abs": "\\abs",
+                                        "capitalize": "\\CodeIgniter\\View\\Filters::capitalize",
+                                        "date": "\\CodeIgniter\\View\\Filters::date",
+                                        "date_modify": "\\CodeIgniter\\View\\Filters::date_modify",
+                                        "default": "\\CodeIgniter\\View\\Filters::default",
+                                        "esc": "\\CodeIgniter\\View\\Filters::esc",
+                                        "excerpt": "\\CodeIgniter\\View\\Filters::excerpt",
+                                        "highlight": "\\CodeIgniter\\View\\Filters::highlight",
+                                        "highlight_code": "\\CodeIgniter\\View\\Filters::highlight_code",
+                                        "limit_words": "\\CodeIgniter\\View\\Filters::limit_words",
+                                        "limit_chars": "\\CodeIgniter\\View\\Filters::limit_chars",
+                                        "local_currency": "\\CodeIgniter\\View\\Filters::local_currency",
+                                        "local_number": "\\CodeIgniter\\View\\Filters::local_number",
+                                        "lower": "\\strtolower",
+                                        "nl2br": "\\CodeIgniter\\View\\Filters::nl2br",
+                                        "number_format": "\\number_format",
+                                        "prose": "\\CodeIgniter\\View\\Filters::prose",
+                                        "round": "\\CodeIgniter\\View\\Filters::round",
+                                        "strip_tags": "\\strip_tags",
+                                        "title": "\\CodeIgniter\\View\\Filters::title",
+                                        "upper": "\\strtoupper"
+                                    },
+                                    "corePlugins": {
+                                        "csp_script_nonce": "\\CodeIgniter\\View\\Plugins::cspScriptNonce",
+                                        "csp_style_nonce": "\\CodeIgniter\\View\\Plugins::cspStyleNonce",
+                                        "current_url": "\\CodeIgniter\\View\\Plugins::currentURL",
+                                        "previous_url": "\\CodeIgniter\\View\\Plugins::previousURL",
+                                        "mailto": "\\CodeIgniter\\View\\Plugins::mailto",
+                                        "safe_mailto": "\\CodeIgniter\\View\\Plugins::safeMailto",
+                                        "lang": "\\CodeIgniter\\View\\Plugins::lang",
+                                        "validation_errors": "\\CodeIgniter\\View\\Plugins::validationErrors",
+                                        "route": "\\CodeIgniter\\View\\Plugins::route",
+                                        "siteURL": "\\CodeIgniter\\View\\Plugins::siteURL"
+                                    },
+                                    "decorators": [],
+                                    "appOverridesFolder": "overrides"
+                                },
+                                "saveData": true,
+                                "viewsCount": 0,
+                                "layout": null,
+                                "sections": [],
+                                "sectionStack": []
+                            }
+                        },
+                        "allowCallbacks": true,
+                        "tempAllowCallbacks": true,
+                        "beforeInsert": [],
+                        "afterInsert": [],
+                        "beforeUpdate": [],
+                        "afterUpdate": [],
+                        "beforeInsertBatch": [],
+                        "afterInsertBatch": [],
+                        "beforeUpdateBatch": [],
+                        "afterUpdateBatch": [],
+                        "beforeFind": [],
+                        "afterFind": [],
+                        "beforeDelete": [],
+                        "afterDelete": [],
+                        "table": "plat",
+                        "primaryKey": "id",
+                        "useAutoIncrement": true,
+                        "builder": {
+                            "resetDeleteData": false,
+                            "QBSelect": [],
+                            "QBDistinct": false,
+                            "QBFrom": [
+                                "\"plat\""
+                            ],
+                            "QBJoin": [],
+                            "QBWhere": [],
+                            "QBGroupBy": [],
+                            "QBHaving": [],
+                            "QBKeys": [],
+                            "QBLimit": false,
+                            "QBOffset": false,
+                            "QBOrderBy": [],
+                            "QBUnion": [],
+                            "QBNoEscape": [],
+                            "QBSet": [],
+                            "QBWhereGroupStarted": false,
+                            "QBWhereGroupCount": 0,
+                            "QBIgnore": false,
+                            "QBOptions": [],
+                            "db": "[CodeIgniter\\Database\\Postgre\\Connection Object *RECURSION*]",
+                            "tableName": "plat",
+                            "randomKeyword": [
+                                "RANDOM()"
+                            ],
+                            "countString": "SELECT COUNT(*) AS ",
+                            "binds": {
+                                "nom": [
+                                    "Mofo gasy",
+                                    true
+                                ],
+                                "prix": [
+                                    300,
+                                    true
+                                ],
+                                "id_categorie": [
+                                    1,
+                                    true
+                                ]
+                            },
+                            "bindsKeyCount": [],
+                            "canLimitDeletes": true,
+                            "canLimitWhereUpdates": true,
+                            "supportedIgnoreStatements": {
+                                "insert": "ON CONFLICT DO NOTHING"
+                            },
+                            "testMode": false,
+                            "joinTypes": [
+                                "LEFT",
+                                "RIGHT",
+                                "OUTER",
+                                "INNER",
+                                "LEFT OUTER",
+                                "RIGHT OUTER"
+                            ],
+                            "isLiteralStr": [],
+                            "pregOperators": []
+                        },
+                        "tempData": [],
+                        "escape": [],
+                        "builderMethodsNotAvailable": [
+                            "getCompiledInsert",
+                            "getCompiledSelect",
+                            "getCompiledUpdate"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "file": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/CodeIgniter.php",
+            "line": 363,
+            "function": "handleRequest",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": [
+                null,
+                {
+                    "handler": "file",
+                    "backupHandler": "dummy",
+                    "prefix": "",
+                    "ttl": 60,
+                    "reservedCharacters": "{}()/\\@:",
+                    "file": {
+                        "storePath": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/writable/cache/",
+                        "mode": 416
+                    },
+                    "memcached": {
+                        "host": "127.0.0.1",
+                        "port": 11211,
+                        "weight": 1,
+                        "raw": false
+                    },
+                    "redis": {
+                        "host": "127.0.0.1",
+                        "password": null,
+                        "port": 6379,
+                        "timeout": 0,
+                        "async": false,
+                        "persistent": false,
+                        "database": 0
+                    },
+                    "validHandlers": {
+                        "apcu": "CodeIgniter\\Cache\\Handlers\\ApcuHandler",
+                        "dummy": "CodeIgniter\\Cache\\Handlers\\DummyHandler",
+                        "file": "CodeIgniter\\Cache\\Handlers\\FileHandler",
+                        "memcached": "CodeIgniter\\Cache\\Handlers\\MemcachedHandler",
+                        "predis": "CodeIgniter\\Cache\\Handlers\\PredisHandler",
+                        "redis": "CodeIgniter\\Cache\\Handlers\\RedisHandler",
+                        "wincache": "CodeIgniter\\Cache\\Handlers\\WincacheHandler"
+                    },
+                    "cacheQueryString": false,
+                    "cacheStatusCodes": []
+                },
+                false
+            ]
+        },
+        {
+            "file": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/Boot.php",
+            "line": 417,
+            "function": "run",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": []
+        },
+        {
+            "file": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/Boot.php",
+            "line": 68,
+            "function": "runCodeIgniter",
+            "class": "CodeIgniter\\Boot",
+            "type": "::",
+            "args": [
+                {
+                    "startTime": 1792601864.015141,
+                    "totalTime": null,
+                    "config": "[Config\\App Object *RECURSION*]",
+                    "benchmark": {
+                        "timers": {
+                            "total_execution": {
+                                "start": 1792601864.015141,
+                                "end": null
+                            },
+                            "bootstrap": {
+                                "start": 1792601864.015274,
+                                "end": 1792601864.015937
+                            },
+                            "required_before_filters": {
+                                "start": 1792601864.015938,
+                                "end": 1792601864.016152
+                            },
+                            "routing": {
+                                "start": 1792601864.016153,
+                                "end": 1792601864.016252
+                            },
+                            "before_filters": {
+                                "start": 1792601864.016266,
+                                "end": 1792601864.016271
+                            },
+                            "controller": {
+                                "start": 1792601864.016271,
+                                "end": null
+                            },
+                            "controller_constructor": {
+                                "start": 1792601864.016272,
+                                "end": 1792601864.016615
+                            },
+                            "route_attributes_before": {
+                                "start": 1792601864.016274,
+                                "end": 1792601864.016274
+                            }
+                        }
+                    },
+                    "request": "[CodeIgniter\\HTTP\\IncomingRequest Object *RECURSION*]",
+                    "response": "[CodeIgniter\\HTTP\\Response Object *RECURSION*]",
+                    "router": {
+                        "collection": {
+                            "defaultNamespace": "App\\Controllers\\",
+                            "defaultController": "Home",
+                            "defaultMethod": "index",
+                            "defaultPlaceholder": "any",
+                            "translateURIDashes": false,
+                            "autoRoute": false,
+                            "override404": null,
+                            "routeFiles": [
+                                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/Routes.php"
+                            ],
+                            "placeholders": {
+                                "any": ".*",
+                                "segment": "[^/]+",
+                                "alphanum": "[a-zA-Z0-9]+",
+                                "num": "[0-9]+",
+                                "alpha": "[a-zA-Z]+",
+                                "hash": "[^/]+"
+                            },
+                            "routes": {
+                                "*": [],
+                                "OPTIONS": [],
+                                "GET": {
+                                    "__hot-reload": {
+                                        "name": "__hot-reload",
+                                        "handler": "[Closure]",
+                                        "from": "__hot-reload"
+                                    },
+                                    "/": {
+                                        "name": "/",
+                                        "handler": "\\App\\Controllers\\Home::index",
+                                        "from": "/"
+                                    },
+                                    "api/categories": {
+                                        "name": "api/categories",
+                                        "handler": "\\App\\Controllers\\Api\\Categories::index",
+                                        "from": "api/categories"
+                                    },
+                                    "api/plats": {
+                                        "name": "api/plats",
+                                        "handler": "\\App\\Controllers\\Api\\Plats::index",
+                                        "from": "api/plats"
+                                    },
+                                    "api/plats/([0-9]+)": {
+                                        "name": "api/plats/([0-9]+)",
+                                        "handler": "\\App\\Controllers\\Api\\Plats::show/$1",
+                                        "from": "api/plats/(:num)"
+                                    },
+                                    "api/commandes": {
+                                        "name": "api/commandes",
+                                        "handler": "\\App\\Controllers\\Api\\Commandes::index",
+                                        "from": "api/commandes"
+                                    },
+                                    "api/commandes/([0-9]+)": {
+                                        "name": "api/commandes/([0-9]+)",
+                                        "handler": "\\App\\Controllers\\Api\\Commandes::show/$1",
+                                        "from": "api/commandes/(:num)"
+                                    }
+                                },
+                                "HEAD": [],
+                                "POST": {
+                                    "api/plats": {
+                                        "name": "api/plats",
+                                        "handler": "\\App\\Controllers\\Api\\Plats::create",
+                                        "from": "api/plats"
+                                    },
+                                    "api/commandes": {
+                                        "name": "api/commandes",
+                                        "handler": "\\App\\Controllers\\Api\\Commandes::create",
+                                        "from": "api/commandes"
+                                    }
+                                },
+                                "PATCH": [],
+                                "PUT": {
+                                    "api/plats/([0-9]+)": {
+                                        "name": "api/plats/([0-9]+)",
+                                        "handler": "\\App\\Controllers\\Api\\Plats::update/$1",
+                                        "from": "api/plats/(:num)"
+                                    }
+                                },
+                                "DELETE": {
+                                    "api/plats/([0-9]+)": {
+                                        "name": "api/plats/([0-9]+)",
+                                        "handler": "\\App\\Controllers\\Api\\Plats::delete/$1",
+                                        "from": "api/plats/(:num)"
+                                    }
+                                },
+                                "TRACE": [],
+                                "CONNECT": [],
+                                "CLI": []
+                            },
+                            "routesNames": {
+                                "*": [],
+                                "OPTIONS": [],
+                                "GET": {
+                                    "__hot-reload": "__hot-reload",
+                                    "/": "/",
+                                    "api/categories": "api/categories",
+                                    "api/plats": "api/plats",
+                                    "api/plats/([0-9]+)": "api/plats/([0-9]+)",
+                                    "api/commandes": "api/commandes",
+                                    "api/commandes/([0-9]+)": "api/commandes/([0-9]+)"
+                                },
+                                "HEAD": [],
+                                "POST": {
+                                    "api/plats": "api/plats",
+                                    "api/commandes": "api/commandes"
+                                },
+                                "PATCH": [],
+                                "PUT": {
+                                    "api/plats/([0-9]+)": "api/plats/([0-9]+)"
+                                },
+                                "DELETE": {
+                                    "api/plats/([0-9]+)": "api/plats/([0-9]+)"
+                                },
+                                "TRACE": [],
+                                "CONNECT": [],
+                                "CLI": []
+                            },
+                            "routesOptions": {
+                                "GET": {
+                                    "__hot-reload": [],
+                                    "/": [],
+                                    "api/categories": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    },
+                                    "api/plats": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    },
+                                    "api/plats/([0-9]+)": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    },
+                                    "api/commandes": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    },
+                                    "api/commandes/([0-9]+)": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    }
+                                },
+                                "POST": {
+                                    "api/plats": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    },
+                                    "api/commandes": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    }
+                                },
+                                "PUT": {
+                                    "api/plats/([0-9]+)": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    }
+                                },
+                                "DELETE": {
+                                    "api/plats/([0-9]+)": {
+                                        "namespace": "App\\Controllers\\Api"
+                                    }
+                                }
+                            },
+                            "HTTPVerb": "POST",
+                            "defaultHTTPMethods": [
+                                "GET",
+                                "HEAD",
+                                "POST",
+                                "PATCH",
+                                "PUT",
+                                "DELETE",
+                                "OPTIONS",
+                                "TRACE",
+                                "CONNECT",
+                                "CLI"
+                            ],
+                            "group": null,
+                            "currentSubdomain": null,
+                            "currentOptions": null,
+                            "didDiscover": true,
+                            "fileLocator": "[CodeIgniter\\Autoloader\\FileLocator Object *RECURSION*]",
+                            "moduleConfig": {
+                                "enabled": true,
+                                "discoverInComposer": true,
+                                "aliases": [
+                                    "events",
+                                    "filters",
+                                    "registrars",
+                                    "routes",
+                                    "services"
+                                ],
+                                "composerPackages": []
+                            },
+                            "prioritize": false,
+                            "prioritizeDetected": false,
+                            "httpHost": "localhost:8080",
+                            "useSupportedLocalesOnly": false
+                        },
+                        "directory": null,
+                        "controller": "\\App\\Controllers\\Api\\Plats",
+                        "method": "create",
+                        "params": [],
+                        "indexPage": "index.php",
+                        "translateURIDashes": false,
+                        "matchedRoute": [
+                            "api/plats",
+                            "\\App\\Controllers\\Api\\Plats::create"
+                        ],
+                        "matchedRouteOptions": {
+                            "namespace": "App\\Controllers\\Api"
+                        },
+                        "detectedLocale": null,
+                        "filtersInfo": [],
+                        "autoRouter": null,
+                        "routeAttributes": {
+                            "class": [],
+                            "method": []
+                        },
+                        "permittedURIChars": "a-z 0-9~%.:_\\-"
+                    },
+                    "controller": "\\App\\Controllers\\Api\\Plats",
+                    "method": "create",
+                    "output": null,
+                    "context": "web",
+                    "enableFilters": true,
+                    "returnResponse": false,
+                    "bufferLevel": 1,
+                    "pageCache": {
+                        "cacheQueryString": false,
+                        "ttl": 0,
+                        "cache": {
+                            "prefix": "",
+                            "path": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/writable/cache/",
+                            "mode": 416
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "file": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/public/index.php",
+            "line": 59,
+            "function": "bootWeb",
+            "class": "CodeIgniter\\Boot",
+            "type": "::",
+            "args": [
+                {
+                    "systemDirectory": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/../../vendor/codeigniter4/framework/system",
+                    "appDirectory": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/..",
+                    "writableDirectory": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/../../writable",
+                    "testsDirectory": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/../../tests",
+                    "viewDirectory": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/../Views",
+                    "envDirectory": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/app/Config/../../"
+                }
+            ]
+        },
+        {
+            "file": "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/vendor/codeigniter4/framework/system/rewrite.php",
+            "line": 44,
+            "args": [
+                "/Users/dylan/Documents/App/S5/web/20:10:2026/gargote/backend/public/index.php"
+            ],
+            "function": "require_once"
+        }
+    ]
+}%                                                                                                                                                  
+dylan@MacBook-Air gargote % 
